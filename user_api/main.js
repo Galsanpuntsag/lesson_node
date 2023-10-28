@@ -38,14 +38,54 @@ app.post("/api/users", (req, res) => {
 //<Post end/>
 //<Delete start>
 
-app.delete("/api/users/:id", (req, res) => {
-  res.status(200).json({ message: "Succes DELETE method" });
+app.delete("/api/users/:userId", (req, res) => {
+  console.log("Deltete user by ID");
+
+  const { userId } = req.params;
+
+  const { users } = JSON.parse(
+    fs.readFileSync("users.json", { encoding: "utf-8" })
+  ); // {users: []}
+
+  const index = users.findIndex((el) => el.id === userId);
+  if (index < 0) {
+    res.status(400).json({ message: `${userId} тай хэрэглэгч олдсонгүй` });
+  } else {
+    users.splice(index, 1);
+    fs.writeFileSync("./users.json", JSON.stringify({ users }), {
+      encoding: "utf-8",
+    });
+
+    res.status(200).json({ message: `${userId} тай хэрэглэгч устгалаа` });
+  }
 });
 
 //<Delete end/>
 
-app.put("/api/users/:id", (req, res) => {
-  res.status(200).json({ message: "Succes PUT method" }); //{users; []}
+//<Put>
+
+app.put("/api/users/:userId", (req, res) => {
+  console.log("Update user by ID");
+
+  const { userId } = req.params;
+
+  const { users } = JSON.parse(
+    fs.readFileSync("users.json", { encoding: "utf-8" })
+  );
+
+  const index = users.findIndex((el) => el === el.key);
+  if (index === index) {
+    res.status(400).json({ message: `${userId} тай хэрэглэгч хадаглагдсан` });
+  } else {
+    users.map(index, 1);
+    fs.writeFileSync("./users.json", JSON.stringify({ users }), {
+      encoding: "utf-8",
+    });
+
+    res.status(200).json({ message: `${userId} тай хэрэглэгч шинчлэгдлээ.` });
+  }
 });
+
+//<Put>
 
 app.listen(port, () => console.log(`Server running at http:localhost:${port}`));
