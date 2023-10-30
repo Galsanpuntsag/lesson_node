@@ -13,6 +13,13 @@
       "email": "Deegii25@gmail.com",
       "status": "online",
       "department": "technology"
+    },
+    {
+      "id": "e8762601-3414-4e0d-ad66-3fc3fdc677c3",
+      "name": "Davaa",
+      "email": "Daraa@gmail.com",
+      "status": "offline",
+      "department": "design"
     }
   ]
 }
