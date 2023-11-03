@@ -8,7 +8,7 @@ const userHeadWords = () => {
         <th>Images</th>
         <th>Name</th>
         <th>Surname</th>
-        <th>Job</th>
+        <th>Department</th>
         <th>Email</th>
         <th>Date</th>
         <th>Directoin</th>

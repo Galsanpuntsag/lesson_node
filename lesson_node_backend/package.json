@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "next": "14.0.1",
+    "node": "^21.1.0",
+    "node-modules": "^1.0.1",
     "react": "^18",
     "react-dom": "^18"
   },

@@ -1,7 +1,7 @@
 import React from "react";
-import UserHeadWords from "./userHeadWords";
-import UserBodyInfo from "./userBodyInfo";
-import { users } from "../Data/usersData";
+import UserHeadWords from "../Head/userHeadWords";
+import UserBodyInfo from "../Throw/userBodyInfo";
+import { users } from "../../Data/usersData";
 
 const userTable = () => {
   return (
