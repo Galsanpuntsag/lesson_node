@@ -35,7 +35,6 @@ const userBodyInfo = ({ users }) => {
                 <div className="font-bold ml-5">{user.name}</div>
               </td>
               <td>
-                <br />
                 <span className="badge badge-ghost badge-sm ml-5">
                   {user.job}
                 </span>
@@ -50,9 +49,7 @@ const userBodyInfo = ({ users }) => {
               </td>
               <th>
                 <th>
-                  <button className="btn btn-outline btn-warning ml-5">
-                    Edit
-                  </button>
+                  <button className="btn btn-outline btn-warning">Edit</button>
                 </th>
                 <th>
                   <button className="btn btn-outline btn-error ml-5 mr-10">
