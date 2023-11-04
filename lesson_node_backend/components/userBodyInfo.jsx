@@ -50,6 +50,7 @@ const userBodyInfo = ({ users }) => {
               <th>
                 <th>
                   <button className="btn btn-outline btn-warning">Edit</button>
+                  git
                 </th>
                 <th>
                   <button className="btn btn-outline btn-error ml-5 mr-10">
