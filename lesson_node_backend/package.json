@@ -9,7 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "next": "14.0.1",
+=======
+    "cors": "^2.8.5",
+    "next": "14.0.1",
+    "node": "^21.1.0",
+    "node-modules": "^1.0.1",
+>>>>>>> 6c4bd96c5828dd40a396adc2bab6e1a3d2a6d540
     "react": "^18",
     "react-dom": "^18"
   },
